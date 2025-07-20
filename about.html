@@ -152,6 +152,26 @@
             </div>
         </div>
     </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Solución para navbar que no colapsa
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
     
+    if(navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
+    }
+    
+    // Cierra el navbar al hacer click en un enlace (opcional)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbarCollapse.classList.remove('show');
+        });
+    });
+});
+</script>
 </body>
 </html>
