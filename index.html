@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marble & Bloom - Postres Artesanales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favico.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent only-home">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <img src="images/favico.png" alt="Marble & Bloom" height="60">
+                    <span class="brand-name ms-3">Marble & Bloom</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Nosotras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Todos los Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="carrito.html">
+                            <i class="bi bi-cart3"></i>
+                            <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero-section">
+    <!-- Carrusel como fondo -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://delantaldealces.com/wp-content/uploads/2016/03/tartaletas-crema-frutos-bosque-3.jpg" class="d-block w-100" alt="Postre 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.nestle-cereals.com/ec/sites/g/files/qirczx961/files/styles/1_1_768px_width/public/srh_recipes/0ad699eb40b9b1d01c2a4a857213161a.jpg.webp?itok=fX0x74RB" class="d-block w-100" alt="Postre 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.aws.nestle.recipes/resized/2024_10_28T08_37_48_badun_images.badun.es_galletas_de_leche_condensada_y_chocolate_1290_742.jpg" class="d-block w-100" alt="Postre 3">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contenido del hero superpuesto -->
+    <div class="hero-overlay"></div>
+    <div class="container h-100 d-flex align-items-center position-relative">
+        <div class="hero-content text-center text-white">
+            <h1 class="display-3 fw-bold mb-4" id="slogan" >Postres que se contemplan</h1>
+            <p class="lead mb-5">Inspirados en la elegancia del mármol y la delicadeza de las flores</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="menu.html" class="btn btn-primary btn-lg px-4">Ver Menú</a>
+                <a href="#featured" class="btn btn-outline-light btn-lg px-4">Destacados</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Featured Products -->
+    <section id="featured" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="subtitle">Nuestros favoritos</span>
+                <h2 class="section-title">Postres Destacados</h2>
+            </div>
+           <div class="row g-4 justify-content-center">
+    <!-- Producto 1 -->
+    <div class="col-md-6 col-lg-3">
+        <div class="product-card card h-100 border-0 shadow-sm">
+            <div class="product-badge bg-danger">Popular</div>
+            <div class="product-img-container">
+                <img src="images/tartaletas.jpg" class="card-img-top" alt="Mini tartaletas de frutas">
+                <div class="product-actions">
+                    <button class="btn btn-sm btn-dark quick-view" data-bs-toggle="modal" data-bs-target="#productModal">Vista rápida</button>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <h5 class="product-title" id="mini">Mini tartaletas de frutas</h5>
+                <div class="product-price">$3.50</div>
+                <div class="product-rating mb-3">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="ms-1">(24)</span>
+                </div>
+                <button class="btn btn-primary add-to-cart" data-product="Mini tartaletas de frutas" data-price="3.50">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-md-6 col-lg-3">
+        <div class="product-card card h-100 border-0 shadow-sm">
+            <div class="product-badge bg-danger">Popular</div>
+            <div class="product-img-container">
+                <img src="images/cheescake.jpg" class="card-img-top" alt="Cheescake">
+                <div class="product-actions">
+                    <button class="btn btn-sm btn-dark quick-view" data-bs-toggle="modal" data-bs-target="#productModal1">Vista rápida</button>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <h5 class="product-title" id="mini">Cheecake</h5>
+                <div class="product-price">$3.99</div>
+                <div class="product-rating mb-3">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="ms-1">(24)</span>
+                </div>
+                <button class="btn btn-primary add-to-cart" data-product="Cheecake" data-price="3.99">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-md-6 col-lg-3">
+        <div class="product-card card h-100 border-0 shadow-sm">
+            <div class="product-badge bg-danger">Popular</div>
+            <div class="product-img-container">
+                <img src="images/galletas.jpg" class="card-img-top" alt="Galletas">
+                <div class="product-actions">
+                    <button class="btn btn-sm btn-dark quick-view" data-bs-toggle="modal" data-bs-target="#productModal2">Vista rápida</button>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <h5 class="product-title" id="mini">Galletas con chispas de Chocolate</h5>
+                <div class="product-price">$1.99</div>
+                <div class="product-rating mb-3">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="ms-1">(24)</span>
+                </div>
+                <button class="btn btn-primary add-to-cart" data-product="Galletas con chispas de Cholate" data-price="1.99">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="text-center mt-5">
+                <a href="menu.html" class="btn btn-outline-primary px-4">Ver Todos los Productos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="pe-lg-5">
+                        <span class="subtitle">Nuestra historia</span>
+                        <h2 class="section-title mb-4">M & B: Marble & Bloom</h2>
+                        <p class="mb-4">Una marca donde los postres no solo se comen: se contemplan. Inspirados en la elegancia del mármol y la delicadeza de las flores, creamos experiencias dulces que combinan arte y sabor.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill  me-2"></i> Ingredientes premium</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill  me-2"></i> Elaboración artesanal</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill  me-2"></i> Presentaciones únicas</li>
+                        </ul>
+                        <a href="about.html" class="btn btn-primary">Conoce más</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-img-container position-relative">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nuestra pastelería" class="img-fluid rounded-3 main-img">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Detalle postre" class="position-absolute rounded-3 border border-4 border-white detail-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="subtitle">Lo que dicen nuestros clientes</span>
+                <h2 class="section-title">Testimonios</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"Los postres de Marble & Bloom son una obra de arte. No solo son hermosos a la vista, sino que el sabor es increíble. ¡Mi favorito son las tartaletas de frutas!"</p>
+                            <div class="testimonial-author d-flex align-items-center mt-4">
+                                <img src="images/user.png" alt="María G." class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">María G.</h6>
+                                    <small class="text-muted">Guayaquil</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"Cada postre de Marble & Bloom es una delicia visual y gustativa. La combinación de sabores y presentación es impecable. Las galletas con chispas de chocolate son irresistibles."</p>
+                            <div class="testimonial-author d-flex align-items-center mt-4">
+                                <img src="images/user.png" alt="María G." class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Juan Diego P.</h6>
+                                    <small class="text-muted">Ambato</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"Marble & Bloom ha logrado crear postres que no solo se ven hermosos, sino que también tienen un sabor excepcional. Las mini tartaletas de frutas son mi preferidas, ¡siempre vuelvo por más!"</p>
+                            <div class="testimonial-author d-flex align-items-center mt-4">
+                                <img src="images/user.png" alt="María G." class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Lourdes M.</h6>
+                                    <small class="text-muted">Quito</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-newsletter text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4" id="sub">Suscríbete a nuestro newsletter</h2>
+                    <p class="mb-4">Recibe nuestras últimas novedades, promociones especiales y recetas exclusivas directamente en tu correo.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                            <button class="btn btn-dark" type="submit">Suscribirse</button>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                            <label class="form-check-label small" for="privacyCheck">
+                                Acepto la política de privacidad
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand mb-4">
+                        <img src="images/logo.png" alt="Marble & Bloom" height="150">
+                        <p class="mt-3">Postres artesanales con amor y dedicación. Venta exclusivamente en línea.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/marble_bloom/" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61578004257455" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://wa.me/+593998492406?text=Hola M&B, quiero sus postres" class="text-white me-3"><i class="bi bi-whatsapp fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title mb-4">Menú</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Inicio</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50">Nosotras</a></li>
+                        <li class="mb-2"><a href="menu.html" class="text-white-50">Productos</a></li>
+                        <li class="mb-2"><a href="contacto.html" class="text-white-50">Contacto</a></li>
+                        <li><a href="carrito.html" class="text-white-50">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-title mb-4">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="bi bi-envelope me-2"></i> info@marblebloom.com</li>
+                        <li class="mb-3"><i class="bi bi-phone me-2"></i> +593 99 999 9999</li>
+                        <li><i class="bi bi-clock me-2"></i> Atención: Lunes a Sábado 9am-6pm</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="footer-title mb-4">Métodos de Pago</h5>
+                    <div class="payment-methods mb-4">
+                        <img src="https://logosenvector.com/logo/img/visa-730.jpg" height="40" alt="Visa" class="me-2">
+                        <img src="https://logosenvector.com/logo/img/mastercard-553.jpg" height="40" alt="Mastercard" class="me-2">
+                        
+                    </div>
+                    <h5 class="footer-title mb-3">Envíos</h5>
+                    <p class="small text-white-50">Realizamos envíos a todo el país mediante servicio de mensajería.</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 Marble & Bloom. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white-50 me-3">Términos y condiciones</a>
+                        <a href="#" class="text-white-50">Política de privacidad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="images/Tartaletamini.jpg" class="img-fluid rounded-start" alt="Mini tartaletas de frutas">
+                        </div>
+                        <div class="col-md-6 p-4">
+                            <h4 class="modal-product-title">Mini tartaletas de frutas</h4>
+                            <div class="modal-product-price mb-3">$3.50</div>
+                            <div class="modal-product-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <span class="ms-1">24 reseñas</span>
+                            </div>
+                            <p class="modal-product-description mb-4">Deliciosas tartaletas individuales con base de masa quebrada, rellenas de crema pastelera casera y decoradas con una selección de frutas frescas de temporada. Perfectas para ocasiones especiales o como un dulce capricho.</p>
+                            <div class="mb-4">
+                                <label class="form-label">Cantidad:</label>
+                                <div class="input-group" style="max-width: 150px;">
+                                    <button class="btn btn-outline-secondary btn-decrease" type="button">-</button>
+                                    <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+                                    <button class="btn btn-outline-secondary btn-increase" type="button">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 add-to-cart" data-product="Mini tartaletas de frutas" data-price="3.50">
+                                <i class="bi bi-cart-plus me-2"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="productModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="images/Chesscake1.jpg" class="img-fluid rounded-start" alt="Cheescake">
+                        </div>
+                        <div class="col-md-6 p-4">
+                            <h4 class="modal-product-title">Cheescake</h4>
+                            <div class="modal-product-price mb-3">$3.99</div>
+                            <div class="modal-product-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <span class="ms-1">24 reseñas</span>
+                            </div>
+                            <p class="modal-product-description mb-4">Delicioso cheesecake cremoso con base crujiente de galleta, elaborado con queso crema de la más alta calidad y un toque de vainilla. 
+                                Disponible en versión original o con topping de frutos rojos. Ideal para los amantes de los postres suaves y elegantes, perfecto para acompañar con café o té.</p>
+                            <div class="mb-4">
+                                <label class="form-label">Cantidad:</label>
+                                <div class="input-group" style="max-width: 150px;">
+                                    <button class="btn btn-outline-secondary btn-decrease" type="button">-</button>
+                                    <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+                                    <button class="btn btn-outline-secondary btn-increase" type="button">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 add-to-cart" data-product="Cheecake" data-price="3.99">
+                                <i class="bi bi-cart-plus me-2"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="productModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="images/galletascholate.jpg" class="img-fluid rounded-start" alt="Galletas con chispas de Chocolate">
+                        </div>
+                        <div class="col-md-6 p-4">
+                            <h4 class="modal-product-title">Galletas con Chispas de Chocolate</h4>
+                            <div class="modal-product-price mb-3">$1.99</div>
+                            <div class="modal-product-rating mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <span class="ms-1">24 reseñas</span>
+                            </div>
+                            <p class="modal-product-description mb-4">Irresistibles galletas caseras horneadas al punto perfecto, con generosas chispas de chocolate semiamargo. Crujientes por fuera y suaves por dentro, elaboradas con mantequilla de primera calidad. 
+                                El clásico favorito que nunca pasa de moda, ideal para compartir o disfrutar como un dulce momento personal.</p>
+                            <div class="mb-4 quantity-wrapper">
+                                <label class="form-label">Cantidad:</label>
+                                <div class="input-group" style="max-width: 150px;">
+                                    <button class="btn btn-outline-secondary btn-decrease" type="button">-</button>
+                                    <input type="text" class="form-control text-center quantity-input" value="1" readonly>
+                                    <button class="btn btn-outline-secondary btn-increase" type="button">+</button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 add-to-cart" data-product="Galletas con chispas de Chocolate" data-price="1.99">
+                                <i class="bi bi-cart-plus me-2"></i> Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-primary text-white">
+                <strong class="me-auto">Marble & Bloom</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                Producto agregado al carrito
+            </div>
+        </div>
+    </div>    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    
+
+    <script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar.only-home");
+    if (!navbar) return; // Solo ejecuta si es la página de inicio
+
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+      navbar.classList.remove("navbar-transparent");
+    } else {
+      navbar.classList.remove("scrolled");
+      navbar.classList.add("navbar-transparent");
+    }
+  });
+</script>
+
+
+</body>
+</html>
